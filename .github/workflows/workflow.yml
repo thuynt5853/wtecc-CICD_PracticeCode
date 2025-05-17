@@ -1,0 +1,16 @@
+name: CI workflow
+# 1. name
+
+# 2. Add event
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  
+
+#3 Add job
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
